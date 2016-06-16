@@ -1,0 +1,14 @@
+api:
+  build: .
+  restart: always
+  links:
+   - db
+  ports:
+   - "1337:1337"
+db:
+  image: mongo:3.2
+  restart: always
+  ports:
+   - "27017:27017"
+  volumes:
+   - db:/data/db
