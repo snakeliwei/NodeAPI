@@ -11,6 +11,7 @@ RUN npm install -g nodemon \
     && npm install
 
 WORKDIR /nodeapi
+EXPOSE 1337
 
 # Configure container to run as an executable
 CMD ["nodemon","bin/www"]
